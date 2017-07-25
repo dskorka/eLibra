@@ -12,4 +12,18 @@ export class CarouselFooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  carouselFooter = {
+    title: 'Polecane',
+    branding: [
+      {
+        href: '#',
+        src: 'http://via.placeholder.com/350x150'
+      },
+      {
+        href: '#',
+        src: 'http://via.placeholder.com/350x150'
+      }
+    ]
+  }
+
 }

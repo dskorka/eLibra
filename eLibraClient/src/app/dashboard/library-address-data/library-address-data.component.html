@@ -4,20 +4,24 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active">Adamów</a>
+          <a class="nav-link active">{{departmentLibrary.libAdamow.shortName}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Wola Gułowska</a>
+          <a class="nav-link">{{departmentLibrary.libWG.shortName}}</a>
         </li>
       </ul>
     </div>
 
     <div class="card-block">
-      <h4 class="card-title">Gminna Biblioteka Publiczna w Adamowie</h4>
-      <p class="card-text">ul. Kleeberga 5c, 21-412 Adamów</p>
-      <p class="card-text">tel/fax   25 755 31 47</p>
-      <p class="card-text">e-mail:  biblioteka@adamow.pl</p>
+      <h4 class="card-title">{{departmentLibrary.libAdamow.name}}</h4>
+      <p class="card-text">{{departmentLibrary.libAdamow.address}}</p>
+      <p class="card-text">tel/fax: {{departmentLibrary.libAdamow.phone}}</p>
+      <p class="card-text">e-mail: {{departmentLibrary.libAdamow.email}}</p>
       <p>Godziny otwarcia</p>
       <a href="#" class="btn btn-primary">Napisz wiadomość</a>
     </div>
   </div>
+</div>
+
+<!--https://stackoverflow.com/questions/35422526/how-to-set-bootstrap-navbar-active-class-in-angular-2
+wykorzystaj rozwiazanie w kodzie -->

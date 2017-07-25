@@ -1,6 +1,4 @@
 <div class="container">
-  <p>Carousel by Angular 2</p>
-  <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
-  <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
-
+  <p>{{carouselFooter.title}}</p>
+  <img *ngFor="let brand of carouselFooter.branding" class="card-img-top" src="{{brand.src}}" alt="Card image cap">
 </div>

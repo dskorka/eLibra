@@ -5,59 +5,19 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" *ngFor="let book of books">
 
     <div class="col-md-6">
-      <img class="card-img-top" src="http://via.placeholder.com/140x218" alt="Card image cap">
+      <img class="card-img-top" src="{{book.srcImage}}" alt="Card image cap">
     </div>
     <div class="col-md-6">
-      <p>Tytuł:</p>
-      <p>Autor:</p>
-      <p>Status: "Na pólce"</p>
+      <p>Tytuł: {{book.title}}</p>
+      <p>Autor: {{book.author}}</p>
+      <p>Status: {{book.status}}</p>
+      <a href="#">Wiecej</a>
       <p>Dodaj do koszyka</p><!-- wymagane logowanie lub rejestracja -->
     </div>
 
   </div>
 
-  <div class="row">
-
-    <div class="col-md-6">
-      <img class="card-img-top" src="http://via.placeholder.com/140x218" alt="Card image cap">
-    </div>
-    <div class="col-md-6">
-      <p>Tytuł:</p>
-      <p>Autor:</p>
-      <p>Status: "Na pólce"</p>
-      <p>Dodaj do koszyka</p> <!-- wymagane logowanie lub rejestracja -->
-
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-md-6">
-      <img class="card-img-top" src="http://via.placeholder.com/140x218" alt="Card image cap">
-    </div>
-    <div class="col-md-6">
-      <p>Tytuł:</p>
-      <p>Autor:</p>
-      <p>Status: "Na pólce"</p>
-      <p>Dodaj do koszyka</p> <!-- wymagane logowanie lub rejestracja -->
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-md-6">
-      <img class="card-img-top" src="http://via.placeholder.com/140x218" alt="Card image cap">
-    </div>
-    <div class="col-md-6">
-      <p>Tytuł:</p>
-      <p>Autor:</p>
-      <p>Status: "Na pólce"</p>
-      <p>Dodaj do koszyka</p><!-- wymagane logowanie lub rejestracja -->
-    </div>
-  </div>
 </div>

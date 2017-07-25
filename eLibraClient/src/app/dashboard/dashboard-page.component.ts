@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <app-nav-bar></app-nav-bar>
     <div class="container-fluid">
       <div class="row" style="padding-top: 50px">
-        <div class="col-md-9">
+        <div class="col-md-8">
 
           <app-lastest-article-panel></app-lastest-article-panel>
           <app-new-article-panel></app-new-article-panel>
@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-4">
 
           <app-search-by-word></app-search-by-word>
           <app-new-book-panel></app-new-book-panel>

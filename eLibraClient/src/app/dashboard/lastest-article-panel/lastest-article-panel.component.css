@@ -3,3 +3,20 @@
   border-radius: 5px;
   padding: 25px
 }
+
+.card-text {
+  word-wrap: break-word;
+}
+
+.col-md-7 {
+  margin-left: 80px;
+  margin-top: 15px;
+}
+
+#img-art {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 15px
+}
+

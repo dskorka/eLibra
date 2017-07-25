@@ -6,5 +6,20 @@
 }
 
 .row {
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  border-bottom: dotted;
+
+}
+
+#art-img {
+  margin-bottom: 10px;
+}
+
+#art-content {
+  margin-left: 5px;
+}
+
+#btn {
+  position: absolute;
+  right: 10%;
 }
