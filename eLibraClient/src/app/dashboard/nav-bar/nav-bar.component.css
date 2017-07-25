@@ -23,3 +23,13 @@
   right: auto;
   width: 100%;
 }
+
+.row {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative
+}
+
+#logo-img {
+  margin-left: 0;
+}

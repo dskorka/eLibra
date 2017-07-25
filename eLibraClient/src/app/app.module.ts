@@ -12,6 +12,7 @@ import { NewArticlePanelComponent } from './dashboard/new-article-panel/new-arti
 import { NewBookPanelComponent } from './dashboard/new-book-panel/new-book-panel.component';
 import { SearchByWordComponent } from './dashboard/search-by-word/search-by-word.component';
 import { SubscriptionComponent } from './dashboard/subscription/subscription.component';
+import { DashboardPageComponent } from './dashboard/dashboard-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SubscriptionComponent } from './dashboard/subscription/subscription.com
     NewArticlePanelComponent,
     NewBookPanelComponent,
     SearchByWordComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    DashboardPageComponent
   ],
   imports: [
     BrowserModule,
