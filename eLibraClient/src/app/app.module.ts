@@ -13,6 +13,11 @@ import { NewBookPanelComponent } from './dashboard/new-book-panel/new-book-panel
 import { SearchByWordComponent } from './dashboard/search-by-word/search-by-word.component';
 import { SubscriptionComponent } from './dashboard/subscription/subscription.component';
 import { DashboardPageComponent } from './dashboard/dashboard-page.component';
+import {CarouselFooterService} from "./dashboard/carousel-footer/carousel-footer.service";
+import {LastestArticleService} from "./dashboard/lastest-article-panel/lastest-article.service";
+import {LibraryAddressDataService} from "./dashboard/library-address-data/library-address-data.service";
+import {NewArticlePanelService} from "./dashboard/new-article-panel/new-article-panel.service";
+import {NewBookPanelService} from "./dashboard/new-book-panel/new-book-panel.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +37,13 @@ import { DashboardPageComponent } from './dashboard/dashboard-page.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    CarouselFooterService,
+    LastestArticleService,
+    LibraryAddressDataService,
+    NewArticlePanelService,
+    NewBookPanelService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewBookPanelService} from "./new-book-panel.service";
 
 @Component({
   selector: 'app-new-book-panel',
@@ -7,39 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewBookPanelComponent implements OnInit {
 
-  constructor() { }
+  books=[];
+
+  constructor(private newBookPanelService:NewBookPanelService) {
+    this.books = this.newBookPanelService.getBooks();
+  }
 
   ngOnInit() {
   }
 
-  books = [
-    {
-      id: '1',
-      title: 'Test',
-      author: 'Test',
-      status: 'Na półce',
-      srcImage: 'http://via.placeholder.com/140x218'
-    },
-    {
-      id: '2',
-      title: 'Test',
-      author: 'Test',
-      status: 'Wypożyczone',
-      srcImage: 'http://via.placeholder.com/140x218'
-    },
-    {
-      id: '3',
-      title: 'Test',
-      author: 'Test',
-      status: 'Na półce',
-      srcImage: 'http://via.placeholder.com/140x218'
-    },
-    {
-      id: '4',
-      title: 'Test',
-      author: 'Test',
-      status: 'Wypożyczone',
-      srcImage: 'http://via.placeholder.com/140x218'
-    }
-  ]
+
 }

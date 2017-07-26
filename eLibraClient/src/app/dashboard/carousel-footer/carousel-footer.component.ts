@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { CarouselFooterService } from './carousel-footer.service'
 
 @Component({
   selector: 'app-carousel-footer',
@@ -7,23 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselFooterComponent implements OnInit {
 
-  constructor() { }
+  carouselFooter = {};
+
+  constructor(private carouselFooterService:CarouselFooterService) {
+    this.carouselFooter = this.carouselFooterService.getCarouselFooter();
+  }
 
   ngOnInit() {
   }
 
-  carouselFooter = {
-    title: 'Polecane',
-    branding: [
-      {
-        href: '#',
-        src: 'http://via.placeholder.com/350x150'
-      },
-      {
-        href: '#',
-        src: 'http://via.placeholder.com/350x150'
-      }
-    ]
-  }
+
+
+
 
 }
