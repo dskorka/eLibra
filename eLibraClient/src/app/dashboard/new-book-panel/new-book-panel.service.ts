@@ -9,28 +9,28 @@ export class NewBookPanelService {
       title: 'Test',
       author: 'Test',
       status: 'Na półce',
-      srcImage: 'http://via.placeholder.com/140x218'
+      imageSrc: 'http://via.placeholder.com/140x218'
     },
     {
       id: '2',
       title: 'Test',
       author: 'Test',
       status: 'Wypożyczone',
-      srcImage: 'http://via.placeholder.com/140x218'
+      imageSrc: 'http://via.placeholder.com/140x218'
     },
     {
       id: '3',
       title: 'Test',
       author: 'Test',
       status: 'Na półce',
-      srcImage: 'http://via.placeholder.com/140x218'
+      imageSrc: 'http://via.placeholder.com/140x218'
     },
     {
       id: '4',
       title: 'Test',
       author: 'Test',
       status: 'Wypożyczone',
-      srcImage: 'http://via.placeholder.com/140x218'
+      imageSrc: 'http://via.placeholder.com/140x218'
     }
   ];
 

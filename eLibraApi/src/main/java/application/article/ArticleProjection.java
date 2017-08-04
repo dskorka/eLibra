@@ -1,5 +1,7 @@
 package application.article;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
 import javax.persistence.*;
 
 /**
@@ -13,17 +15,21 @@ public class ArticleProjection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @JsonView
     private Long articleId;
 
     @Column(name = "title")
+    @JsonView
     private String title;
 
     @Column(name = "shortDescription")
+    @JsonView
     private String shortDescription;
 
     @Column(name = "imageSrc")
+    @JsonView
     private String imageSrc;
 
-    public ArticleProjection() { }
+    protected ArticleProjection() { }
 
 }

@@ -1,6 +1,7 @@
 package infrastructure.config;
 
 import application.article.service.ArticleProjectionService;
+import application.book.service.BookProjectionService;
 import application.dashboardPage.service.DashboardPageService;
 import application.dashboardPage.service.DashboardPageServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +15,9 @@ import org.springframework.context.annotation.Configuration;
 public class DashboardPageConfig {
 
     @Bean
-    public DashboardPageService dashboardPageService(ArticleProjectionService articleProjectionService){
-        return new DashboardPageServiceImpl(articleProjectionService);
+    public DashboardPageService dashboardPageService(ArticleProjectionService articleProjectionService,
+                                                     BookProjectionService bookProjectionService){
+
+        return new DashboardPageServiceImpl(articleProjectionService,bookProjectionService);
     }
 }

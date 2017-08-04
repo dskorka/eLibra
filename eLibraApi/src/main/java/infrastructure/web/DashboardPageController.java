@@ -18,11 +18,9 @@ public class DashboardPageController {
         this.service = service;
     }
 
-    @RequestMapping("/")
-    public String getDashboardViewProjection(){
+    @RequestMapping(value = "/")
+    public DashboardPageProjection getDashboardViewProjection(){
 
-        DashboardPageProjection dashboardProjection = service.getDashboardProjection();
-
-        return "hi";
+        return service.getDashboardProjection();
     }
 }
