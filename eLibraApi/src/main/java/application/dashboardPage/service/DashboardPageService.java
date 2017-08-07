@@ -1,6 +1,6 @@
 package application.dashboardPage.service;
 
-import application.dashboardPage.DashboardPageProjection;
+import application.dashboardPage.DashboardPageViewModel;
 
 /**
  * Created by Damian on 27.07.2017
@@ -9,5 +9,5 @@ import application.dashboardPage.DashboardPageProjection;
 
 public interface DashboardPageService {
 
-    DashboardPageProjection getDashboardProjection();
+    DashboardPageViewModel getDashboardProjection();
 }

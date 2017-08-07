@@ -1,8 +1,5 @@
 package application.book;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonView;
-
 import javax.persistence.*;
 
 /**
@@ -16,26 +13,41 @@ public class BookProjection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @JsonView
     private Long id;
 
     @Column(name = "title")
-    @JsonView
     private String title;
 
     @Column(name = "author")
-    @JsonView
     private String author;
 
     @Column(name = "bookRentStatus")
     @Enumerated(EnumType.STRING)
-    @JsonBackReference
     private BookRentStatus bookRentStatus;
 
     @Column(name = "imageSrc")
-    @JsonView
     private String imageSrc;
 
     protected BookProjection() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public BookRentStatus getBookRentStatus() {
+        return bookRentStatus;
+    }
+
+    public String getImageSrc() {
+        return imageSrc;
     }
 }

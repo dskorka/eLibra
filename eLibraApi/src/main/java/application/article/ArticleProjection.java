@@ -15,21 +15,33 @@ public class ArticleProjection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @JsonView
     private Long articleId;
 
     @Column(name = "title")
-    @JsonView
     private String title;
 
     @Column(name = "shortDescription")
-    @JsonView
     private String shortDescription;
 
     @Column(name = "imageSrc")
-    @JsonView
     private String imageSrc;
 
     protected ArticleProjection() { }
 
+
+    public Long getArticleId() {
+        return articleId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public String getImageSrc() {
+        return imageSrc;
+    }
 }

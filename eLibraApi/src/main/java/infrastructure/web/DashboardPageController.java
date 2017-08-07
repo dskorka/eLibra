@@ -1,6 +1,6 @@
 package infrastructure.web;
 
-import application.dashboardPage.DashboardPageProjection;
+import application.dashboardPage.DashboardPageViewModel;
 import application.dashboardPage.service.DashboardPageService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +19,7 @@ public class DashboardPageController {
     }
 
     @RequestMapping(value = "/")
-    public DashboardPageProjection getDashboardViewProjection(){
+    public DashboardPageViewModel getDashboardViewProjection(){
 
         return service.getDashboardProjection();
     }

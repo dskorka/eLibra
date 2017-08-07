@@ -2,7 +2,7 @@ package application.dashboardPage.service;
 
 import application.article.service.ArticleProjectionService;
 import application.book.service.BookProjectionService;
-import application.dashboardPage.DashboardPageProjection;
+import application.dashboardPage.DashboardPageViewModel;
 import org.springframework.stereotype.Service;
 
 /**
@@ -23,8 +23,8 @@ public class DashboardPageServiceImpl implements DashboardPageService {
     }
 
 
-    public DashboardPageProjection getDashboardProjection() {
-       return new DashboardPageProjection(
+    public DashboardPageViewModel getDashboardProjection() {
+       return new DashboardPageViewModel(
                 articleProjectionService.getFiveNewArticleProjection(),
                bookProjectionService.getNewBookProjectionItems()
         );
