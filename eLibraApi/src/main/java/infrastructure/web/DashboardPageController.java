@@ -2,7 +2,8 @@ package infrastructure.web;
 
 import application.dashboardPage.DashboardPageViewModel;
 import application.dashboardPage.service.DashboardPageService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,9 +19,9 @@ public class DashboardPageController {
         this.service = service;
     }
 
-    @RequestMapping(value = "/")
+    @CrossOrigin
+    @GetMapping(value = "/dashboard")
     public DashboardPageViewModel getDashboardViewProjection(){
-
         return service.getDashboardProjection();
     }
 }

@@ -26,7 +26,7 @@ public class DashboardPageServiceImpl implements DashboardPageService {
     public DashboardPageViewModel getDashboardProjection() {
        return new DashboardPageViewModel(
                 articleProjectionService.getFiveNewArticleProjection(),
-               bookProjectionService.getNewBookProjectionItems()
+                bookProjectionService.getNewBookProjectionItems()
         );
     }
 }
