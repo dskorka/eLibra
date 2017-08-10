@@ -1,7 +1,7 @@
 package application.book.service;
 
-import application.book.BookProjection;
-import infrastructure.persistence.JpaBookProjectionRepo;
+import application.book.dto.BookProjection;
+import infrastructure.persistence.book.JpaBookProjectionRepo;
 
 import java.util.List;
 

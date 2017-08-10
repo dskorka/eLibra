@@ -1,8 +1,8 @@
-package infrastructure.config;
+package infrastructure.config.domain;
 
 import application.book.service.BookProjectionService;
 import application.book.service.BookProjectionServiceImpl;
-import infrastructure.persistence.JpaBookProjectionRepo;
+import infrastructure.persistence.book.JpaBookProjectionRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

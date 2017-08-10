@@ -2,7 +2,7 @@ package application.dashboardPage.service;
 
 import application.article.service.ArticleProjectionService;
 import application.book.service.BookProjectionService;
-import application.dashboardPage.DashboardPageViewModel;
+import application.dashboardPage.dto.DashboardPageViewModel;
 import org.springframework.stereotype.Service;
 
 /**

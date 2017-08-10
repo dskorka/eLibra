@@ -1,4 +1,6 @@
-package application.book;
+package application.book.repo;
+
+import application.book.dto.BookProjection;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package infrastructure.web;
 
-import application.dashboardPage.DashboardPageViewModel;
+import application.dashboardPage.dto.DashboardPageViewModel;
 import application.dashboardPage.service.DashboardPageService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

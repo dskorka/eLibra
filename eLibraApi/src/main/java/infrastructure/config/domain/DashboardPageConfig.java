@@ -1,4 +1,4 @@
-package infrastructure.config;
+package infrastructure.config.domain;
 
 import application.article.service.ArticleProjectionService;
 import application.book.service.BookProjectionService;

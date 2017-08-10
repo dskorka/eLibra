@@ -1,4 +1,4 @@
-package application.article;
+package application.article.dto;
 
 import com.fasterxml.jackson.annotation.JsonView;
 

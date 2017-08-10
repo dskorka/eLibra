@@ -1,7 +1,7 @@
-package infrastructure.persistence;
+package infrastructure.persistence.book;
 
-import application.book.BookProjection;
-import application.book.BookProjectionRepo;
+import application.book.dto.BookProjection;
+import application.book.repo.BookProjectionRepo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

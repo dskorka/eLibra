@@ -1,7 +1,7 @@
 package application.article.service;
 
-import application.article.ArticleProjection;
-import application.article.ArticleProjectionRepo;
+import application.article.dto.ArticleProjection;
+import application.article.repo.ArticleProjectionRepo;
 
 import java.util.List;
 

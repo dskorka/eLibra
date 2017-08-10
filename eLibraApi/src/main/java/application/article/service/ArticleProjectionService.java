@@ -1,7 +1,6 @@
 package application.article.service;
 
-import application.article.ArticleProjection;
-import org.springframework.stereotype.Service;
+import application.article.dto.ArticleProjection;
 
 import java.util.List;
 

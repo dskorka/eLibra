@@ -1,7 +1,7 @@
-package infrastructure.persistence;
+package infrastructure.persistence.article;
 
-import application.article.ArticleProjection;
-import application.article.ArticleProjectionRepo;
+import application.article.dto.ArticleProjection;
+import application.article.repo.ArticleProjectionRepo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

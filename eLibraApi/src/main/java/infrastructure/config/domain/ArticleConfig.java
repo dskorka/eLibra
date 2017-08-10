@@ -1,6 +1,6 @@
-package infrastructure.config;
+package infrastructure.config.domain;
 
-import application.article.ArticleProjectionRepo;
+import application.article.repo.ArticleProjectionRepo;
 import application.article.service.ArticleProjectionService;
 import application.article.service.ArticleProjectionServiceImpl;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package application.book;
+package application.book.dto;
 
 import javax.persistence.*;
 

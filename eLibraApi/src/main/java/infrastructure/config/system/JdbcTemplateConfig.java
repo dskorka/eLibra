@@ -1,4 +1,4 @@
-package infrastructure.config;
+package infrastructure.config.system;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

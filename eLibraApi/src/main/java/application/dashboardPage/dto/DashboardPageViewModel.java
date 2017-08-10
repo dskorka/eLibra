@@ -1,7 +1,7 @@
-package application.dashboardPage;
+package application.dashboardPage.dto;
 
-import application.article.ArticleProjection;
-import application.book.BookProjection;
+import application.article.dto.ArticleProjection;
+import application.book.dto.BookProjection;
 
 import java.util.List;
 

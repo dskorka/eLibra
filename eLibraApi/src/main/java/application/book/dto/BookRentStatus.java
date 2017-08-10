@@ -1,12 +1,11 @@
-package application.book;
+package application.book.dto;
 
-public enum BookRentStatus {
+enum BookRentStatus {
 
     FREE(1, "Na półce"),
     RENT(2, "Wypożyczona");
 
     private int id;
-
     private String status;
 
     BookRentStatus(int id, String status) {
@@ -14,11 +13,11 @@ public enum BookRentStatus {
         this.status = status;
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 
-    public String getStatus() {
+    String getStatus() {
         return status;
     }
 }

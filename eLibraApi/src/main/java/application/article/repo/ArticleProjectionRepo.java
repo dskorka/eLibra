@@ -1,4 +1,6 @@
-package application.article;
+package application.article.repo;
+
+import application.article.dto.ArticleProjection;
 
 import java.util.List;
 
