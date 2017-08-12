@@ -2,7 +2,9 @@ package infrastructure.persistence.article;
 
 import application.article.dto.ArticleProjection;
 import application.article.dto.ArticleProjectionFinder;
-import org.jooq.*;
+import org.jooq.DSLContext;
+import org.jooq.Record4;
+import org.jooq.Result;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,27 +25,31 @@ public class ArticleProjectionFinderImpl implements ArticleProjectionFinder {
     }
 
     public List<ArticleProjection> findFiveLatestArticles() {
-        Result<Record4<Object, Object, Object, Object>> articles = jooqRepository
-                .select(field("Article.id"), field("Article.title"), field("Article.description"), field("Article.imageSrc"))
-                .from(table("Article"))
-                .orderBy(field("Article.publicationdate").desc())
-                .limit(7)
-                .fetch();
 
-        for(Record4<Object, Object, Object, Object> art : articles){
+        Result<Record4<Object, Object, String, Object>> articles = findArticles();
+        return getArticlesList(articles);
+    }
 
-            System.out.println(art.getValue(0));
-            System.out.println(art.getValue(3));
-        }
-
+    private List<ArticleProjection> getArticlesList(Result<Record4<Object, Object, String, Object>> articles) {
         return articles.stream()
                 .map(t ->
                     new ArticleProjection(
                             t.getValue("Article.id", Long.class),
                             t.getValue("Article.title", String.class),
-                            t.getValue("Article.description", String.class),
+                            t.getValue("Article.description", String.class) + "...",
                             t.getValue("Article.imageSrc", String.class))
                     )
                 .collect(Collectors.toList());
+    }
+
+    private Result<Record4<Object, Object, String, Object>> findArticles() {
+        return jooqRepository
+                .select(field("Article.id"), field("Article.title"),
+                        field("Article.description").substring(100),
+                        field("Article.imageSrc"))
+                .from(table("Article"))
+                .orderBy(field("Article.publicationDate").desc())
+                .limit(7)
+                .fetch();
     }
 }

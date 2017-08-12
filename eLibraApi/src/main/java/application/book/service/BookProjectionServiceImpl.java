@@ -1,7 +1,6 @@
 package application.book.service;
 
 import application.book.dto.BookProjection;
-import infrastructure.persistence.book.JpaBookProjectionRepo;
 
 import java.util.List;
 
@@ -11,13 +10,7 @@ import java.util.List;
 
 public class BookProjectionServiceImpl implements BookProjectionService {
 
-    private final JpaBookProjectionRepo bookProjectionRepo;
-
-    public BookProjectionServiceImpl(JpaBookProjectionRepo bookProjectionRepo) {
-        this.bookProjectionRepo = bookProjectionRepo;
-    }
-
     public List<BookProjection> getNewBookProjectionItems() {
-        return bookProjectionRepo.getNewBookProjectionItems();
+        return null;
     }
 }

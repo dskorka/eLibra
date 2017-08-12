@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 //@Profile("mssql")
 //@Configuration
-public class MySqlConfig {
+class MySqlConfig {
 
     private static final Logger LOG = LoggerFactory.getLogger(MySqlConfig.class);
 

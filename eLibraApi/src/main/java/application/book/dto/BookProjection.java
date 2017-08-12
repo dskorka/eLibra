@@ -1,53 +1,33 @@
 package application.book.dto;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Created by Damian on 29.07.2017
  */
 
-@Entity
-@Table(name = "book")
 public class BookProjection {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @JsonProperty
     private Long id;
 
-    @Column(name = "title")
+    @JsonProperty
     private String title;
 
-    @Column(name = "author")
+    @JsonProperty
     private String author;
 
-    @Column(name = "bookRentStatus")
-    @Enumerated(EnumType.STRING)
+    @JsonProperty
     private BookRentStatus bookRentStatus;
 
-    @Column(name = "imageSrc")
+    @JsonProperty
     private String imageSrc;
 
-    protected BookProjection() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public BookRentStatus getBookRentStatus() {
-        return bookRentStatus;
-    }
-
-    public String getImageSrc() {
-        return imageSrc;
+    public BookProjection(Long id, String title, String author, BookRentStatus rentStatus, String imageSrc) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.bookRentStatus = rentStatus;
+        this.imageSrc = imageSrc;
     }
 }

@@ -22,10 +22,10 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "infrastructure.persistence")
-public class HibernateConfig {
+class HibernateConfig {
 
     @Bean //required method name: entityManagerFactory!
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
+    LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
 
@@ -36,7 +36,7 @@ public class HibernateConfig {
     }
 
     @Bean
-    public JpaVendorAdapter createVendorAdapter() {
+    JpaVendorAdapter createVendorAdapter() {
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         adapter.setDatabase(Database.MYSQL);
         adapter.setDatabase(Database.H2);
@@ -45,12 +45,12 @@ public class HibernateConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory factory) {
+    PlatformTransactionManager transactionManager(EntityManagerFactory factory) {
         return new JpaTransactionManager(factory);
     }
 
     @Bean
-    public HibernateExceptionTranslator hibernateExceptionTranslator() {
+    HibernateExceptionTranslator hibernateExceptionTranslator() {
         return new HibernateExceptionTranslator();
     }
 }

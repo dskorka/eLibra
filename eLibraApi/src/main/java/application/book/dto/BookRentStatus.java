@@ -1,6 +1,6 @@
 package application.book.dto;
 
-enum BookRentStatus {
+public enum BookRentStatus {
 
     FREE(1, "Na półce"),
     RENT(2, "Wypożyczona");

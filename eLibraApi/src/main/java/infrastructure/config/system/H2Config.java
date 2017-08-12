@@ -19,13 +19,13 @@ import java.sql.SQLException;
 
 @Profile("h2")
 @Configuration
-public class H2Config {
+class H2Config {
 
     private static final Logger LOG = LoggerFactory.getLogger(H2Config.class);
 
     @Primary
     @Bean
-    public EmbeddedDatabase database(){
+    EmbeddedDatabase database(){
 
         LOG.info("H2 Bean is active");
 
@@ -45,7 +45,7 @@ public class H2Config {
      * Connect to "jdbc:h2:tcp://localhost:9092/mem:testdb", username "sa", password empty.
      */
     @Bean(initMethod = "start", destroyMethod = "stop")
-    public Server h2Server() throws SQLException {
+    Server h2Server() throws SQLException {
         return Server.createTcpServer("-tcp", "-tcpAllowOthers", "-tcpPort", "9092");
     }
 
@@ -56,7 +56,7 @@ public class H2Config {
      * Go to http://localhost:8082 and connect to the database "jdbc:h2:mem:testdb", username "sa", password empty.
      */
     @Bean(destroyMethod = "stop")
-    public Server h2WebServer() throws SQLException {
+    Server h2WebServer() throws SQLException {
         return Server.createWebServer("-webAllowOthers","-webPort","8082").start();
     }
 }

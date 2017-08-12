@@ -1,5 +1,7 @@
 package application.article.dto;
 
+import application.article.dto.ArticleProjection;
+
 import java.util.List;
 
 /**

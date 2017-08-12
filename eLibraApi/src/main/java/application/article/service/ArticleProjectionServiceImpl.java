@@ -12,13 +12,7 @@ import java.util.List;
 
 public class ArticleProjectionServiceImpl implements ArticleProjectionService {
 
-    final private ArticleProjectionRepo repo;
-
-    public ArticleProjectionServiceImpl(ArticleProjectionRepo repo) {
-        this.repo = repo;
-    }
-
     public List<ArticleProjection> getFiveNewArticleProjection() {
-        return repo.getNewArticleProjection();
+        return null;
     }
 }

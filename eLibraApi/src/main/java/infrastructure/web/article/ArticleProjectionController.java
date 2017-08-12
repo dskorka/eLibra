@@ -1,4 +1,4 @@
-package infrastructure.web;
+package infrastructure.web.article;
 
 import application.article.dto.ArticleProjection;
 import application.article.dto.ArticleProjectionFinder;
@@ -12,17 +12,16 @@ import java.util.List;
  */
 
 @RestController
-public class ArticleProjectionController {
+class ArticleProjectionController {
 
     private final ArticleProjectionFinder articleFinder;
 
-    public ArticleProjectionController(ArticleProjectionFinder articleFinder) {
+    ArticleProjectionController(ArticleProjectionFinder articleFinder) {
         this.articleFinder = articleFinder;
     }
 
     @GetMapping("/")
-    public List<ArticleProjection> getArticleProjectionList(){
+    List<ArticleProjection> getArticleProjectionList(){
         return articleFinder.findFiveLatestArticles();
-
     }
 }
