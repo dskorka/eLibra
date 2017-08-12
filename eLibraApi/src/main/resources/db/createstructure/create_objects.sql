@@ -2,8 +2,9 @@ CREATE TABLE article
 (
 id                INT           AUTO_INCREMENT  NOT NULL,
 title             NVARCHAR(250)                 NOT NULL,
-shortDescription  NVARCHAR(200)                 NOT NULL,
+description       NVARCHAR(200)                 NOT NULL,
 imageSrc          NVARCHAR(100)                 NOT NULL,
+publicationdate   DATETIME                      NOT NULL,
 PRIMARY KEY (id)
 
 );
