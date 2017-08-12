@@ -1,47 +1,31 @@
 package application.article.dto;
 
-import com.fasterxml.jackson.annotation.JsonView;
-
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Created by Damian on 29.07.2017
  */
 
-@Entity
-@Table(name = "article")
 public class ArticleProjection {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @JsonProperty
     private Long articleId;
 
-    @Column(name = "title")
+    @JsonProperty
     private String title;
 
-    @Column(name = "shortDescription")
+    @JsonProperty
     private String shortDescription;
 
-    @Column(name = "imageSrc")
+    @JsonProperty
     private String imageSrc;
 
-    protected ArticleProjection() { }
+    public ArticleProjection() { }
 
-
-    public Long getArticleId() {
-        return articleId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getShortDescription() {
-        return shortDescription;
-    }
-
-    public String getImageSrc() {
-        return imageSrc;
+    public ArticleProjection(Long articleId, String title, String shortDescription, String imageSrc) {
+        this.articleId = articleId;
+        this.title = title;
+        this.shortDescription = shortDescription;
+        this.imageSrc = imageSrc;
     }
 }

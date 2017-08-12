@@ -1,8 +1,11 @@
 package infrastructure.config.domain;
 
-import application.article.repo.ArticleProjectionRepo;
+import application.article.dto.ArticleProjectionFinder;
 import application.article.service.ArticleProjectionService;
 import application.article.service.ArticleProjectionServiceImpl;
+import infrastructure.persistence.article.ArticleProjectionFinderImpl;
+import org.jooq.DSLContext;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,10 +14,15 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-public class ArticleConfig {
+class ArticleConfig {
 
     @Bean
-    ArticleProjectionService articleProjectionService(ArticleProjectionRepo articleProjectionRepo){
-        return new ArticleProjectionServiceImpl(articleProjectionRepo);
+    ArticleProjectionService articleProjectionService(){
+        return new ArticleProjectionServiceImpl();
+    }
+
+    @Bean
+    ArticleProjectionFinder articleProjectionFinder(@Qualifier("dsl") DSLContext jooqRepository){
+        return new ArticleProjectionFinderImpl(jooqRepository);
     }
 }
