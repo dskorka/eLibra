@@ -1,7 +1,5 @@
 package application.article.dto;
 
-import application.article.dto.ArticleProjection;
-
 import java.util.List;
 
 /**
@@ -11,4 +9,6 @@ import java.util.List;
 public interface ArticleProjectionFinder {
 
     List<ArticleProjection> findFiveLatestArticles();
+
+    List<ArticleProjection> findArticlesByContent(String sarchedContent);
 }
