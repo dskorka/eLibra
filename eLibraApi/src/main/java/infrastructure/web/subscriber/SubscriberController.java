@@ -5,10 +5,8 @@ import application.subscriber.service.SubscriberService;
 import infrastructure.web.JsonResponse;
 import infrastructure.web.JsonResponseType;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;

@@ -7,6 +7,8 @@ import application.subscriber.event.EmailSubscriberEvent;
 import application.subscriber.repo.JpaSubscriberRepo;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 /**
  * Created by Damian on 13.08.2017
  */
@@ -24,7 +26,8 @@ public class SubscriberServiceImpl implements SubscriberService {
     @Override
     @Transactional
     public void sendEmailToSubscriber(SubscriberCommand command) {
-        subscriberRepo.save(new Subscriber(command.getEmailSubscriber()));
+        subscriberRepo.save(new Subscriber(command.getEmailSubscriber(), LocalDateTime.now()));
+
         eventPublisher.publish(
                 new EmailSubscriberEvent(command.getEmailSubscriber(),
                         "Witaj w naszej subskrypcji",

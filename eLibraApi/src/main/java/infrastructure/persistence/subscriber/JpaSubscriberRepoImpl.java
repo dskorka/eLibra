@@ -11,8 +11,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class JpaSubscriberRepoImpl implements JpaSubscriberRepo{
 
+    private final JpaDataSubscriberRepo repo;
+
+    public JpaSubscriberRepoImpl(JpaDataSubscriberRepo repo) {
+        this.repo = repo;
+    }
+
     @Override
     public void save(Subscriber subscriber) {
-
+        repo.save(subscriber);
     }
 }
