@@ -21,13 +21,13 @@ class ArticleProjectionController {
         this.articleFinder = articleFinder;
     }
 
-    @GetMapping("/")
-    List<ArticleProjection> getArticleProjectionList(){
+    @GetMapping("/getArticleProjectionList")
+    List<ArticleProjection> getArticleProjectionList() {
         return articleFinder.findFiveLatestArticles();
     }
 
-    @GetMapping("/searchByContent")
-    List<ArticleProjection> getArticleProjectionByContent(@RequestParam String searchedContent){
+    @GetMapping("/searchArticlesProjectionByContent")
+    List<ArticleProjection> getArticleProjectionByContent(@RequestParam String searchedContent) {
         return articleFinder.findArticlesByContent(searchedContent);
     }
 }

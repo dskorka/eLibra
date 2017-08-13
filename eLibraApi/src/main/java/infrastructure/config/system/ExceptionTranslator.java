@@ -11,7 +11,7 @@ import org.springframework.jdbc.support.SQLExceptionTranslator;
  */
 
 
-class ExceptionTranslator  extends DefaultExecuteListener {
+class ExceptionTranslator extends DefaultExecuteListener {
 
     @Override
     public void exception(ExecuteContext context) {

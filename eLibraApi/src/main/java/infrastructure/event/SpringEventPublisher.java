@@ -1,19 +1,20 @@
 package infrastructure.event;
 
-import application.ports.EventPublisher;
 import application.ports.event.DomainEvent;
+import application.ports.event.EventPublisher;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Damian on 12.08.2017
  */
 
-
-public class SpringEventPublisher implements EventPublisher {
+@Component
+class SpringEventPublisher implements EventPublisher {
 
     private final ApplicationEventPublisher eventPublisher;
 
-    public SpringEventPublisher(ApplicationEventPublisher eventPublisher) {
+    SpringEventPublisher(ApplicationEventPublisher eventPublisher) {
         this.eventPublisher = eventPublisher;
     }
 

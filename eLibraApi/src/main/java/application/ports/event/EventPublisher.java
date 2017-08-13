@@ -1,4 +1,4 @@
-package application.ports;
+package application.ports.event;
 
 import application.ports.event.DomainEvent;
 
