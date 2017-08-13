@@ -1,6 +1,7 @@
 package infrastructure.event;
 
 import application.ports.EventPublisher;
+import application.ports.event.DomainEvent;
 import org.springframework.context.ApplicationEventPublisher;
 
 /**
@@ -17,7 +18,7 @@ public class SpringEventPublisher implements EventPublisher {
     }
 
     @Override
-    public void publish(Object event) {
+    public void publish(DomainEvent event) {
         eventPublisher.publishEvent(event);
     }
 }
