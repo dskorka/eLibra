@@ -18,9 +18,6 @@ public class SubscriberCommand {
         this.emailSubscriber = emailSubscriber;
     }
 
-    public SubscriberCommand() {
-    }
-
     public String getEmailSubscriber() {
         return emailSubscriber;
     }

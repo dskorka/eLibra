@@ -4,7 +4,6 @@ package application.ports.event;
  * Created by Damian on 13.08.2017
  */
 
-
 public abstract class EmailEvent implements DomainEvent {
 
     private String email;

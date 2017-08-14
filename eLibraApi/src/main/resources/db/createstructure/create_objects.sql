@@ -19,3 +19,11 @@ imageSrc           NVARCHAR(100)                 NOT NULL,
 publicationDate    DATETIME                      NOT NULL,
 PRIMARY KEY (id)
 );
+
+CREATE TABLE subscriber
+(
+  id                 INT           AUTO_INCREMENT  NOT NULL,
+  subscriber         NVARCHAR(50)  NOT NULL,
+  subscribe_date     DATETIME      NOT NULL,
+  PRIMARY KEY (id)
+);
