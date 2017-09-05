@@ -20,7 +20,7 @@ class BookProjectionController {
         this.bookFinder = bookFinder;
     }
 
-    @GetMapping("/findFiveLastestBooks")
+    @GetMapping("/Book/TheLatestFive")
     List<BookProjection> getFiveLatestBooks() {
         return bookFinder.findFiveLatestBooks();
     }

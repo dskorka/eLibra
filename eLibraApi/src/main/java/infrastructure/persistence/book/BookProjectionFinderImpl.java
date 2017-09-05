@@ -35,9 +35,9 @@ public class BookProjectionFinderImpl implements BookProjectionFinder {
                 .map(t -> new BookProjection(
                     t.getValue("Book.id", Long.class),
                     t.getValue("Book.title", String.class),
-                    t.getValue("Article.author", String.class),
-                        BookRentStatus.valueOf(t.getValue("Article.bookRentStatus", String.class)),
-                        t.getValue("Article.imageSrc", String.class))).
+                    t.getValue("Book.author", String.class),
+                        BookRentStatus.valueOf(t.getValue("Book.bookRentStatus", String.class)),
+                        t.getValue("Book.imageSrc", String.class))).
                 collect(Collectors.toList());
     }
 
@@ -48,7 +48,7 @@ public class BookProjectionFinderImpl implements BookProjectionFinder {
                             field("Book.imageSrc"))
                     .from("Book")
                     .orderBy(field("Book.publicationDate").desc())
-                    .limit(7)
+                    .limit(6)
                     .fetch();
     }
 }
