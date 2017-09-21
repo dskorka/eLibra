@@ -26,12 +26,12 @@ public class SubscriberServiceImpl implements SubscriberService {
     @Override
     @Transactional
     public void sendEmailToSubscriber(SubscriberCommand command) {
-        subscriberRepo.save(new Subscriber(command.getEmailSubscriber(), LocalDateTime.now()));
+        subscriberRepo.save(new Subscriber(command.getEmailSubscriber()));
 
         eventPublisher.publish(
                 new EmailSubscriberEvent(command.getEmailSubscriber(),
                         "Witaj w naszej subskrypcji",
-                        "Witaj uzytkowniku!. Zostales dodany do listy mailingowej"
+                        "Witaj uzytkowniku! Zostales dodany do listy mailingowej"
                 )
         );
     }

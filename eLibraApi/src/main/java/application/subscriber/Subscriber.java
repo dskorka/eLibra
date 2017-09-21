@@ -23,8 +23,8 @@ public class Subscriber {
 
     Subscriber(){}
 
-    public Subscriber(String emailSubscriber, LocalDateTime subscribeDate) {
+    public Subscriber(String emailSubscriber) {
         this.subscriberEmail = emailSubscriber;
-        this.subscribeDate = subscribeDate;
+        this.subscribeDate = LocalDateTime.now();
     }
 }

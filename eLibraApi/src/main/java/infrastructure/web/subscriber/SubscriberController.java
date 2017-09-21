@@ -14,20 +14,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
  * Created by Damian on 13.08.2017
  */
-
 @RestController
-public class SubscriberController {
+class SubscriberController {
 
     private final SubscriberService subscriberService;
 
-    public SubscriberController(SubscriberService subscriberService) {
+    SubscriberController(SubscriberService subscriberService) {
         this.subscriberService = subscriberService;
     }
 
@@ -35,17 +34,17 @@ public class SubscriberController {
     ResponseEntity<JsonResponse> subscribe(@Valid @RequestBody SubscriberCommand command, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
-            return new ResponseEntity<JsonResponse>(
+            return new ResponseEntity<>(
                     new JsonResponse(JsonResponseType.ERROR, getErrorsMessage(bindingResult)),
                     new HttpHeaders(),
-                    HttpStatus.PRECONDITION_FAILED
+                    HttpStatus.BAD_REQUEST
             );
         }
 
         subscriberService.sendEmailToSubscriber(command);
 
-        return new ResponseEntity<JsonResponse>(
-                new JsonResponse(JsonResponseType.SUCCESS, Arrays.asList("Operacja zakończyła się pomyślnie!")),
+        return new ResponseEntity<>(
+                new JsonResponse(JsonResponseType.SUCCESS, Collections.singletonList("Operacja zakończyła się pomyślnie!")),
                 new HttpHeaders(),
                 HttpStatus.OK
         );

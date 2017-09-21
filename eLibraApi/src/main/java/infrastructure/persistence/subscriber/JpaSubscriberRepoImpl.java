@@ -19,6 +19,6 @@ public class JpaSubscriberRepoImpl implements JpaSubscriberRepo{
 
     @Override
     public void save(Subscriber subscriber) {
-        repo.save(subscriber);
+        repo.saveAndFlush(subscriber);
     }
 }
