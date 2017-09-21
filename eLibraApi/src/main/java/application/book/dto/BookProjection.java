@@ -23,11 +23,15 @@ public class BookProjection {
     @JsonProperty
     private String imageSrc;
 
-    public BookProjection(Long id, String title, String author, BookRentStatus rentStatus, String imageSrc) {
+    private BookProjection(Long id, String title, String author, BookRentStatus rentStatus, String imageSrc) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.bookRentStatus = rentStatus;
         this.imageSrc = imageSrc;
+    }
+
+    public static BookProjection of(Long id, String title, String author, BookRentStatus rentStatus, String imageSrc) {
+        return new BookProjection(id, title, author, rentStatus, imageSrc);
     }
 }

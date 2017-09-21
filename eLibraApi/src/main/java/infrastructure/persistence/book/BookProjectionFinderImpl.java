@@ -32,7 +32,7 @@ public class BookProjectionFinderImpl implements BookProjectionFinder {
 
     private List<BookProjection> getBooksList(Result<Record5<Object, Object, Object, Object, Object>> books) {
         return books.stream()
-                .map(t -> new BookProjection(
+                .map(t -> BookProjection.of(
                     t.getValue("Book.id", Long.class),
                     t.getValue("Book.title", String.class),
                     t.getValue("Book.author", String.class),

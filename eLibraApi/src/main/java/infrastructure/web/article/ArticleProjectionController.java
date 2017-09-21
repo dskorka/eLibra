@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * Created by Damian on 12.08.2017
  */
-
 @RestController
 class ArticleProjectionController {
 
@@ -21,12 +20,12 @@ class ArticleProjectionController {
         this.articleFinder = articleFinder;
     }
 
-    @GetMapping("/getArticleProjectionList")
+    @GetMapping("/article/fiveNew")
     List<ArticleProjection> getArticleProjectionList() {
         return articleFinder.findFiveLatestArticles();
     }
 
-    @GetMapping("/searchArticlesProjectionByContent")
+    @GetMapping("/article/search")
     List<ArticleProjection> getArticleProjectionByContent(@RequestParam String searchedContent) {
         return articleFinder.findArticlesByContent(searchedContent);
     }

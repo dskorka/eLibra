@@ -10,5 +10,5 @@ public interface ArticleProjectionFinder {
 
     List<ArticleProjection> findFiveLatestArticles();
 
-    List<ArticleProjection> findArticlesByContent(String sarchedContent);
+    List<ArticleProjection> findArticlesByContent(String searchedContent);
 }

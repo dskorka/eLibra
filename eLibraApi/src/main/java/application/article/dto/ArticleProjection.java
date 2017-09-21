@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Created by Damian on 29.07.2017
  */
-
 public class ArticleProjection {
 
     @JsonProperty
@@ -20,12 +19,14 @@ public class ArticleProjection {
     @JsonProperty
     private String imageSrc;
 
-    public ArticleProjection() { }
-
-    public ArticleProjection(Long articleId, String title, String shortDescription, String imageSrc) {
+    private ArticleProjection(Long articleId, String title, String shortDescription, String imageSrc) {
         this.articleId = articleId;
         this.title = title;
         this.shortDescription = shortDescription;
         this.imageSrc = imageSrc;
+    }
+
+    public static ArticleProjection of(Long articleId, String title, String shortDescription, String imageSrc) {
+        return new ArticleProjection(articleId, title, shortDescription, imageSrc);
     }
 }

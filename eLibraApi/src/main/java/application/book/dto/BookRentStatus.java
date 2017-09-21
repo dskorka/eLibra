@@ -5,8 +5,8 @@ public enum BookRentStatus {
     FREE(1, "Na półce"),
     RENT(2, "Wypożyczona");
 
-    private int id;
-    private String status;
+    private final int id;
+    private final String status;
 
     BookRentStatus(int id, String status) {
         this.id = id;

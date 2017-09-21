@@ -9,7 +9,6 @@ import java.util.List;
  * Created by Damian on 02.08.2017
  */
 
-
 public class ArticleProjectionServiceImpl implements ArticleProjectionService {
 
     public List<ArticleProjection> getFiveNewArticleProjection() {
